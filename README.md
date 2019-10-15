@@ -35,3 +35,34 @@ Feel free to tackle this problem in a way that demonstrates your expertise of an
 San Francisco's food truck open dataset is [located here](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/data) and there is an endpoint with a [CSV dump of the latest data here](https://data.sfgov.org/api/views/rqzj-sfat/rows.csv). We've included a [copy of this data](./Mobile_Food_Facility_Permit.csv) in this repo as well.
 
 Good luck! Please send a link to your solution on Github back to us at least 12 hours before your interview so we can review it before we speak.
+
+
+## The Product
+
+This problem creates an excellent opportunity for us to create a value added service on top of the data provided by the city of San Francisco.  We need to capture the market by strategically delivering features to capture the market early on.  Below is the proposed immediate project and then future phases for product expansion.
+
+## Project Tasks
+- Feature Goal: Creation of a CLI feature that returns 5 carts within the range of a provide latitude and longitude.  The approach is to find food cart records closes in the range to the provided coordinates until the limit is reached.
+- Subtasks: Prepare a function to determine the closest trucks based on coordinates.
+- Create basic test cases to ensure reliability of method
+
+## Assumptions & Considerations:  
+ - Data provided is always available
+ - Data is finite and can fit into memory as it applies to only San Francisco. Otherwise, we'll need to use a KV database
+ - Food truck location id is unique per latitude and longitude coordinates
+ - Only status:APPROVED permits items are allowed to be returned
+ - Decision to create standalone application for speed and avoiding need to be connected 
+ 
+ ## How to Run
+ From command line, execute...
+  > npm install -g .
+
+  Usage:  feedme latitude longitude numResults
+  > feedme 37.7568774515357 -122.418579889476 5
+
+
+## Future Features Expansion
+- Expose sychronization feature with the data source.  This will ensure we are able to obtain the latest information for new food choices and eliminate those no longer in business.
+- Expose an API with the similiar parameters as the CLI
+- Create a mobile app that utilizes the API
+- Allow changing of data for different cities

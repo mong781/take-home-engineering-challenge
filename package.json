@@ -1,0 +1,21 @@
+{
+  "name": "feedme",
+  "version": "1.0.0",
+  "description": "Microsoft Commercial Software Engineering - take home engineering challenge",
+  "main": "feedme.js",
+  "dependencies": {
+    "csv-parser": "^2.3.1",
+    "csvtojson": "^2.0.10",
+    "fs": "0.0.1-security",
+    "sort-by-distance": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tai Mong",
+  "license": "MIT",
+  "bin": {
+    "feedme": "./feedme.js"
+  }
+}
